@@ -3,30 +3,25 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>winding345.github.io/about/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <loc>http://winding345.github.io/</loc>
+    <lastmod>2019-04-17T15:47:02+08:00</lastmod>
   </url>
   
   <url>
-    <loc>winding345.github.io/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <loc>http://winding345.github.io/about/</loc>
   </url>
   
   <url>
-    <loc>winding345.github.io/categories/</loc>
+    <loc>http://winding345.github.io/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>winding345.github.io/contact/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <loc>http://winding345.github.io/contacts/</loc>
   </url>
   
   <url>
-    <loc>winding345.github.io/tags/</loc>
+    <loc>http://winding345.github.io/tags/</loc>
     <priority>0</priority>
   </url>
   
