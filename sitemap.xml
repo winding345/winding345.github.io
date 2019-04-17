@@ -8,6 +8,17 @@
   </url>
   
   <url>
+    <loc>http://winding345.github.io/post/first-post/</loc>
+    <lastmod>2019-04-17T15:27:42+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://winding345.github.io/post/</loc>
+    <lastmod>2019-04-17T15:27:42+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://winding345.github.io/about/</loc>
   </url>
   
@@ -18,10 +29,6 @@
   
   <url>
     <loc>http://winding345.github.io/contacts/</loc>
-  </url>
-  
-  <url>
-    <loc>http://winding345.github.io/posts/</loc>
   </url>
   
   <url>
