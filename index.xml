@@ -12,12 +12,16 @@
     
     
     <item>
-      <title>First Post</title>
+      <title>Hugo简介与安装</title>
       <link>http://winding345.github.io/post/first-post/</link>
-      <pubDate>Wed, 17 Apr 2019 15:27:42 +0800</pubDate>
+      <pubDate>Thu, 18 Apr 2019 00:00:00 +0000</pubDate>
       
       <guid>http://winding345.github.io/post/first-post/</guid>
-      <description>this is my first blog</description>
+      <description> 什么是Hugo 简单的理解Hugo就是一个静态网页的打包发布工具，由于其操作简单，常用来作为个人博客等简单网页的设计与部署。
+Hugo中文相关文档，点击就送
+Hugo的安装 Windows下载安装 Hugo V 0.55.2-64bit版下载点我
+下载安装与配置  下载后解压缩到某个目录下(eg: &amp;ldquo;D:/Program/),如图所示:  右键此电脑图标-选择属性-高级系统设置(界面左边标签栏)-环境变量(界面下方按键)，界面如图所示:  在下方的系统变量中找到Path选项，点击编辑或直接双击，如图所示：  点击新建，输入你的hugo.exe所在的目录(eg: &amp;ldquo;D:/Program/Hugo&amp;rdquo;，不需要引号)，点击确定，完成环境变量加入，如图所示：  完成安装
+  </description>
     </item>
     
   </channel>
