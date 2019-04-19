@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>winding345&#39;s blog  | Hugo使用于个人blog的搭建</title>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="generator" content="Hugo 0.55.1" />
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    
+    
+      <link href="/dist/css/app.955516233bcafa4d2a1c13cea63c7b50.css" rel="stylesheet">
+    
+
+    
+
+    
+      
+    
+
+    
+
+    <meta property="og:title" content="Hugo使用于个人blog的搭建" />
+<meta property="og:description" content="1 个人blog的结构 Hugo作为一个用于静态网页的生成打包及发布的工具，在制作个人blog上有着较多的应用。而个人blog一般有以下几个内容组成：
+ 网页的框架——基本的网站交互结构，如http协议等，此部分内容由Hugo工具自动生成，一键式搭建网页框架； 网页的元素与布局——一个网页的可视化内容，类似于QQ空间的装扮设置，此部分内容可以自己编写相应的xml等前端配置文件生成主题或直接采用第三方设置好的主题(类似于QQ空间中自己设置的装扮或者是QQ空间给你提供的装扮套装) 网页的内容——你的博文和介绍等，如QQ空间的日志和说说  接下来本文将从以上三个方面来介绍如何使用Hugo来搭建个人blog。
+2 blog的搭建过程 2.1网页的框架的构建 设置网页的框架是Hugo的基本功能。Hugo可以通过一条命令直接完成一个网页框架的搭建。 Hugo的基本操作一般由终端命令来完成，虽然在Windows环境下Hugo的部分操作仍然可以通过直接在资源管理器中对文件进行修改与移动，但是不推荐使用，尽可能使用终端命令有助于对终端相关内容的学习与理解。
+ 首先打开终端,进入你存储个人blog内容的文件夹，如下列示例代码中的&rdquo;D:\hugo&rdquo;，在该文件夹下输入以下命令并回车：    hugo new site yoursitename
+   创建完毕后，将会在该目录下创建出一个相应的文件夹，如图所示。 由图中可以看出，hugo在创建完成一个网页框架后，生成了一下几个内容：    archetypes文件夹——网页结构样式文件夹，用于存放网页结构的文件夹，不自定义主题的情况下可以无视
+config.toml文件 ——网页配置文件，对网页中模块的增删中主要需要修改的文件
+content文件夹——内容文件夹，用于存放网页中的博文等内容，自己写的文章都存放与此文件夹中
+data文件夹——暂时不明确
+layouts文件夹——网页结构层次文件夹，不自定义主题的情况下可以无视
+static文件夹——用于存放网页中一些元素内容的文件夹，如图片等
+themes文件夹——存放主题的文件夹
+   通过以上命令操作，一个网页的基本框架已经构建成功，但想将此网页在浏览器中进行展示，仍然需要相应的主题来对其进行可视化  2.2 主题的设置  前文已经提到，主题可以有两种方式来得到，一是自己写相关的配置文件来自定义主题，二是自行悬着第三方提供的主题，下文仅介绍如何安装第三方的主题。第三方主题一般是在hugo官方网站中选择确认后，通过链接跳转至github，再在github中进行clone至2.1节中提到的themes文件夹中，即完成了下载。以下以ananke主题(主题的github地址点我)为例显示相应的下载示意。   主题下载完成后，注意主题的文件夹名，如图例中下载的主题文件夹名为gohugo-theme-ananke，这是在配置文件中使用的主题名称。打开上述文件中的config.toml文件(记事本可直接打开)，追加以下代码，完成主题设置，若使用其他主题，只需修改为对应的主题名称即可.    theme=gohugo-theme-ananke
+   主题设置完毕后，网页已经可以完成对外的显示，退出主题文件夹，在网页的主目录下进行本地部署，部署命令如下：    hugo server
+   打开本地浏览器，输入以下代码或者直接点我进行访问网页,网页显示如下图所示：    https://localhost:1313" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://winding345.github.io/post/post2/" />
+<meta property="article:published_time" content="2019-04-18T00:00:00&#43;00:00"/>
+<meta property="article:modified_time" content="2019-04-18T00:00:00&#43;00:00"/>
+
+<meta itemprop="name" content="Hugo使用于个人blog的搭建">
+<meta itemprop="description" content="1 个人blog的结构 Hugo作为一个用于静态网页的生成打包及发布的工具，在制作个人blog上有着较多的应用。而个人blog一般有以下几个内容组成：
+ 网页的框架——基本的网站交互结构，如http协议等，此部分内容由Hugo工具自动生成，一键式搭建网页框架； 网页的元素与布局——一个网页的可视化内容，类似于QQ空间的装扮设置，此部分内容可以自己编写相应的xml等前端配置文件生成主题或直接采用第三方设置好的主题(类似于QQ空间中自己设置的装扮或者是QQ空间给你提供的装扮套装) 网页的内容——你的博文和介绍等，如QQ空间的日志和说说  接下来本文将从以上三个方面来介绍如何使用Hugo来搭建个人blog。
+2 blog的搭建过程 2.1网页的框架的构建 设置网页的框架是Hugo的基本功能。Hugo可以通过一条命令直接完成一个网页框架的搭建。 Hugo的基本操作一般由终端命令来完成，虽然在Windows环境下Hugo的部分操作仍然可以通过直接在资源管理器中对文件进行修改与移动，但是不推荐使用，尽可能使用终端命令有助于对终端相关内容的学习与理解。
+ 首先打开终端,进入你存储个人blog内容的文件夹，如下列示例代码中的&rdquo;D:\hugo&rdquo;，在该文件夹下输入以下命令并回车：    hugo new site yoursitename
+   创建完毕后，将会在该目录下创建出一个相应的文件夹，如图所示。 由图中可以看出，hugo在创建完成一个网页框架后，生成了一下几个内容：    archetypes文件夹——网页结构样式文件夹，用于存放网页结构的文件夹，不自定义主题的情况下可以无视
+config.toml文件 ——网页配置文件，对网页中模块的增删中主要需要修改的文件
+content文件夹——内容文件夹，用于存放网页中的博文等内容，自己写的文章都存放与此文件夹中
+data文件夹——暂时不明确
+layouts文件夹——网页结构层次文件夹，不自定义主题的情况下可以无视
+static文件夹——用于存放网页中一些元素内容的文件夹，如图片等
+themes文件夹——存放主题的文件夹
+   通过以上命令操作，一个网页的基本框架已经构建成功，但想将此网页在浏览器中进行展示，仍然需要相应的主题来对其进行可视化  2.2 主题的设置  前文已经提到，主题可以有两种方式来得到，一是自己写相关的配置文件来自定义主题，二是自行悬着第三方提供的主题，下文仅介绍如何安装第三方的主题。第三方主题一般是在hugo官方网站中选择确认后，通过链接跳转至github，再在github中进行clone至2.1节中提到的themes文件夹中，即完成了下载。以下以ananke主题(主题的github地址点我)为例显示相应的下载示意。   主题下载完成后，注意主题的文件夹名，如图例中下载的主题文件夹名为gohugo-theme-ananke，这是在配置文件中使用的主题名称。打开上述文件中的config.toml文件(记事本可直接打开)，追加以下代码，完成主题设置，若使用其他主题，只需修改为对应的主题名称即可.    theme=gohugo-theme-ananke
+   主题设置完毕后，网页已经可以完成对外的显示，退出主题文件夹，在网页的主目录下进行本地部署，部署命令如下：    hugo server
+   打开本地浏览器，输入以下代码或者直接点我进行访问网页,网页显示如下图所示：    https://localhost:1313">
+
+
+<meta itemprop="datePublished" content="2019-04-18T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2019-04-18T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="131">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Hugo使用于个人blog的搭建"/>
+<meta name="twitter:description" content="1 个人blog的结构 Hugo作为一个用于静态网页的生成打包及发布的工具，在制作个人blog上有着较多的应用。而个人blog一般有以下几个内容组成：
+ 网页的框架——基本的网站交互结构，如http协议等，此部分内容由Hugo工具自动生成，一键式搭建网页框架； 网页的元素与布局——一个网页的可视化内容，类似于QQ空间的装扮设置，此部分内容可以自己编写相应的xml等前端配置文件生成主题或直接采用第三方设置好的主题(类似于QQ空间中自己设置的装扮或者是QQ空间给你提供的装扮套装) 网页的内容——你的博文和介绍等，如QQ空间的日志和说说  接下来本文将从以上三个方面来介绍如何使用Hugo来搭建个人blog。
+2 blog的搭建过程 2.1网页的框架的构建 设置网页的框架是Hugo的基本功能。Hugo可以通过一条命令直接完成一个网页框架的搭建。 Hugo的基本操作一般由终端命令来完成，虽然在Windows环境下Hugo的部分操作仍然可以通过直接在资源管理器中对文件进行修改与移动，但是不推荐使用，尽可能使用终端命令有助于对终端相关内容的学习与理解。
+ 首先打开终端,进入你存储个人blog内容的文件夹，如下列示例代码中的&rdquo;D:\hugo&rdquo;，在该文件夹下输入以下命令并回车：    hugo new site yoursitename
+   创建完毕后，将会在该目录下创建出一个相应的文件夹，如图所示。 由图中可以看出，hugo在创建完成一个网页框架后，生成了一下几个内容：    archetypes文件夹——网页结构样式文件夹，用于存放网页结构的文件夹，不自定义主题的情况下可以无视
+config.toml文件 ——网页配置文件，对网页中模块的增删中主要需要修改的文件
+content文件夹——内容文件夹，用于存放网页中的博文等内容，自己写的文章都存放与此文件夹中
+data文件夹——暂时不明确
+layouts文件夹——网页结构层次文件夹，不自定义主题的情况下可以无视
+static文件夹——用于存放网页中一些元素内容的文件夹，如图片等
+themes文件夹——存放主题的文件夹
+   通过以上命令操作，一个网页的基本框架已经构建成功，但想将此网页在浏览器中进行展示，仍然需要相应的主题来对其进行可视化  2.2 主题的设置  前文已经提到，主题可以有两种方式来得到，一是自己写相关的配置文件来自定义主题，二是自行悬着第三方提供的主题，下文仅介绍如何安装第三方的主题。第三方主题一般是在hugo官方网站中选择确认后，通过链接跳转至github，再在github中进行clone至2.1节中提到的themes文件夹中，即完成了下载。以下以ananke主题(主题的github地址点我)为例显示相应的下载示意。   主题下载完成后，注意主题的文件夹名，如图例中下载的主题文件夹名为gohugo-theme-ananke，这是在配置文件中使用的主题名称。打开上述文件中的config.toml文件(记事本可直接打开)，追加以下代码，完成主题设置，若使用其他主题，只需修改为对应的主题名称即可.    theme=gohugo-theme-ananke
+   主题设置完毕后，网页已经可以完成对外的显示，退出主题文件夹，在网页的主目录下进行本地部署，部署命令如下：    hugo server
+   打开本地浏览器，输入以下代码或者直接点我进行访问网页,网页显示如下图所示：    https://localhost:1313"/>
+
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="http://winding345.github.io/" class="f3 fw2 hover-white no-underline white-90 dib">
+      winding345&#39;s blog
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/about/" title="AboutMe page">
+              AboutMe
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/contacts/" title="Contact page">
+              Contact
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/post/" title="Posts page">
+              Posts
+            </a>
+          </li>
+          
+        </ul>
+      
+      
+
+
+
+
+
+
+
+<a href="https://github.com/winding345" target="_blank" class="link-transition github link dib z-999 pt3 pt0-l mr1" title="Github link" rel="noopener" aria-label="follow on Github——Opens in a new window">
+  <svg  height="32px"  style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+  <path d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"/>
+</svg>
+
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000" width="8px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/>
+</svg>
+</span></a>
+
+
+
+
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+
+    <header class="mt4 w-100">
+      <p class="f6 b helvetica tracked">
+          
+        POSTS
+      </p>
+      <h1 class="f1 athelas mb1">Hugo使用于个人blog的搭建</h1>
+      
+      <time class="f6 mv4 dib tracked" datetime="2019-04-18T00:00:00Z">April 18, 2019</time>      
+      
+      
+    </header>
+
+    <section class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l">
+
+<h1 id="1-个人blog的结构">1 个人blog的结构</h1>
+
+<p>Hugo作为一个用于静态网页的生成打包及发布的工具，在制作个人blog上有着较多的应用。而个人blog一般有以下几个内容组成：</p>
+
+<ul>
+<li>网页的框架——基本的网站交互结构，如http协议等，此部分内容由Hugo工具自动生成，一键式搭建网页框架；</li>
+<li>网页的元素与布局——一个网页的可视化内容，类似于QQ空间的装扮设置，此部分内容可以自己编写相应的xml等前端配置文件生成主题或直接采用第三方设置好的主题(类似于QQ空间中自己设置的装扮或者是QQ空间给你提供的装扮套装)</li>
+<li>网页的内容——你的博文和介绍等，如QQ空间的日志和说说</li>
+</ul>
+
+<p>接下来本文将从以上三个方面来介绍如何使用Hugo来搭建个人blog。</p>
+
+<h1 id="2-blog的搭建过程">2 blog的搭建过程</h1>
+
+<h2 id="2-1网页的框架的构建">2.1网页的框架的构建</h2>
+
+<p>设置网页的框架是Hugo的基本功能。Hugo可以通过一条命令直接完成一个网页框架的搭建。
+Hugo的基本操作一般由终端命令来完成，虽然在Windows环境下Hugo的部分操作仍然可以通过直接在资源管理器中对文件进行修改与移动，但是不推荐使用，尽可能使用终端命令有助于对终端相关内容的学习与理解。</p>
+
+<ul>
+<li>首先打开终端,进入你存储个人blog内容的文件夹，如下列示例代码中的&rdquo;D:\hugo&rdquo;，在该文件夹下输入以下命令并回车：</li>
+</ul>
+
+<blockquote>
+<blockquote>
+<p><em>hugo new site yoursitename</em></p>
+</blockquote>
+</blockquote>
+
+<ul>
+<li>创建完毕后，将会在该目录下创建出一个相应的文件夹，如图所示。
+<img src="https://github.com/winding345/markdown-pictures/blob/master/site-create/1.png?raw=true" alt="" />
+由图中可以看出，hugo在创建完成一个网页框架后，生成了一下几个内容：</li>
+</ul>
+
+<blockquote>
+<blockquote>
+<p><strong><em>archetypes文件夹</em></strong>——网页结构样式文件夹，用于存放网页结构的文件夹，不自定义主题的情况下可以无视</p>
+
+<p><em>config.toml文件</em> ——网页配置文件，对网页中模块的增删中主要需要修改的文件</p>
+
+<p><strong><em>content文件夹</em></strong>——内容文件夹，用于存放网页中的博文等内容，自己写的文章都存放与此文件夹中</p>
+
+<p><strong><em>data文件夹</em></strong>——暂时不明确</p>
+
+<p><strong><em>layouts文件夹</em></strong>——网页结构层次文件夹，不自定义主题的情况下可以无视</p>
+
+<p><strong><em>static文件夹</em></strong>——用于存放网页中一些元素内容的文件夹，如图片等</p>
+
+<p><strong><em>themes文件夹</em></strong>——存放主题的文件夹</p>
+</blockquote>
+</blockquote>
+
+<ul>
+<li>通过以上命令操作，一个网页的基本框架已经构建成功，但想将此网页在浏览器中进行展示，仍然需要相应的主题来对其进行可视化</li>
+</ul>
+
+<h2 id="2-2-主题的设置">2.2 主题的设置</h2>
+
+<ul>
+<li>前文已经提到，主题可以有两种方式来得到，一是自己写相关的配置文件来自定义主题，二是自行悬着第三方提供的主题，下文仅介绍如何安装第三方的主题。第三方主题一般是在hugo官方网站中选择确认后，通过链接跳转至github，再在github中进行clone至2.1节中提到的themes文件夹中，即完成了下载。以下以ananke主题(<a href="https://github.com/budparr/gohugo-theme-ananke">主题的github地址点我</a>)为例显示相应的下载示意。</li>
+</ul>
+
+<p><img src="https://github.com/winding345/markdown-pictures/blob/master/site-create/2.png?raw=true" alt="" /></p>
+
+<ul>
+<li>主题下载完成后，注意主题的文件夹名，如图例中下载的主题文件夹名为gohugo-theme-ananke，这是在配置文件中使用的主题名称。打开上述文件中的config.toml文件(记事本可直接打开)，追加以下代码，完成主题设置，若使用其他主题，只需修改为对应的主题名称即可.</li>
+</ul>
+
+<blockquote>
+<blockquote>
+<p><em>theme=gohugo-theme-ananke</em></p>
+</blockquote>
+</blockquote>
+
+<ul>
+<li>主题设置完毕后，网页已经可以完成对外的显示，退出主题文件夹，在网页的主目录下进行本地部署，部署命令如下：</li>
+</ul>
+
+<blockquote>
+<blockquote>
+<p><em>hugo server</em></p>
+</blockquote>
+</blockquote>
+
+<ul>
+<li>打开本地浏览器，输入以下代码<a href="https://localhost:1313">或者直接点我</a>进行访问网页,网页显示如下图所示：</li>
+</ul>
+
+<blockquote>
+<blockquote>
+<p><em><a href="https://localhost:1313">https://localhost:1313</a></em></p>
+</blockquote>
+</blockquote>
+
+<p><img src="https://github.com/winding345/markdown-pictures/blob/master/site-create/3.png?raw=true" alt="" /></p>
+
+<h2 id="2-3-内容添加">2.3 内容添加</h2>
+
+<p>由于未对博客添加内容，所以导致了网页中只有着基本的主题框架，而框架中没有任何内容，因此，接下来需要对网页的内容进行相应地添加。</p>
+
+<ul>
+<li>首先对主页进行相应地美化。在content文件夹下创建文件_index.md(_index.md文件是网页的相关设置文件，content目录下为主页的配置文件，而在content目录下级的各个目录中的_index.md文件为各个分页面的配置文件)，可以在终端中使用以下命令完成创建：</li>
+</ul>
+
+<blockquote>
+<blockquote>
+<p><em>hugo new _index.md</em></p>
+</blockquote>
+</blockquote>
+
+<p>创建完成后，对_index.md文件进行编辑，以以下内容替换原内容：</p>
+
+<blockquote>
+<blockquote>
+<p># 和python类似，#为注释，所有的内容可以继续对应修改，观察网页的相应变化，了解各个参数的作用。</p>
+
+<p># 在网页进行部署的状态中可以直接修改本文件，修改保存后网页将自动实时刷新，便于观察相应的变化。预览的可能有一定的刷新问题，发现不对的话可以关掉本地部署，再部署一次</p>
+
+<p># 以下各个属性均不是必须内容，可以人为删减，不进行设置</p>
+
+<p>---
+ # 这里是三个横杠，下同</p>
+
+<p>title: &ldquo;这是标题&rdquo;
+  #标题名称，显示在网页上</p>
+
+<p>date: 2019-04-17T15:47:02+08:00
+# 日期，可以省略</p>
+
+<p>description: &ldquo;这是一个描述&rdquo; # 主页中添加相应的描述</p>
+
+<p>featured_image: &ldquo;./images/index.jpg&rdquo; # 这是背景图片，图片存放于static目录下，填写图片的目录地址，省略static及之前的部分</p>
+
+<p>---</p>
+
+<p>#在此之后为主页显示的正文，不属于配置部分</p>
+
+<p>Woo you come here</p>
+</blockquote>
+</blockquote>
+
+<p>完成以上操作后，保存查看结果如下图
+<img src="https://github.com/winding345/markdown-pictures/blob/master/site-create/4.png?raw=true" alt="" /></p>
+
+<p>若出现网页中报错，有格式乱码的问题，需要进行相应的格式转换，（<strong>注意在整个网页设计中，所有的文本md的编码必须为utf-8</strong>)，文本的编码转换可以直接通过windows的记事本完成。</p>
+
+<p>用记事本打开文件，选择左上角文件——另存为，在下方的编码处选择UTF-8格式，原文件名称覆盖保存即可，如下图所示：
+<img src="https://github.com/winding345/markdown-pictures/blob/master/site-create/5.png?raw=true" alt="" /></p>
+
+<ul>
+<li>博客网页不能简单的只有一个主页，因此给博文添加标签分页。分页设置需要在配置文件config.toml中添加一行配置：</li>
+</ul>
+
+<blockquote>
+<blockquote>
+<p><em>SectionPagesMenu = &ldquo;main&rdquo;</em></p>
+</blockquote>
+</blockquote>
+
+<p>添加完成后，在content文件夹下每一个有md文件的文件夹都将生成一个标签页。以下是添加一个post标签，并添加blog文章的实例。</p>
+
+<ul>
+<li>首先要在content目录下创建一个文件夹post，并在其中创建_index.md文件(标签页的配置文件)，在终端输入图中命令完成文件夹与文件的创建：
+<img src="https://github.com/winding345/markdown-pictures/blob/master/site-create/6.png?raw=true" alt="" /></li>
+</ul>
+
+<p>修改刚刚创建的_index.md文件，进行相应的配置，配置文件的内容与主页的_index.md相似，此次使用的内容只设置名称为post。</p>
+
+<blockquote>
+<blockquote>
+<p>---</p>
+
+<p>title: &ldquo;POST&rdquo;</p>
+
+<p>---</p>
+</blockquote>
+</blockquote>
+
+<p>保持并部署显示如下图：
+<img src="https://github.com/winding345/markdown-pictures/blob/master/site-create/7.png?raw=true" alt="" /></p>
+
+<ul>
+<li>接下来在post标签页中添加我们的主题内容blog文章。创建blog的方式与创建_index.md的方式相同，代码如下：</li>
+</ul>
+
+<blockquote>
+<blockquote>
+<p><em>hugo new post/first.md</em></p>
+</blockquote>
+</blockquote>
+
+<p>创建完毕后，对md进行修改，进行blog文章编写吧！blog的文件可以按照markdown的格式进行编写，[我的下一篇blog]()将简单介绍常见的markdown语法，也可以直接使用文件进行编辑。如有需要抬头和编写时间，文本的开头要加上一下配置信息：</p>
+
+<blockquote>
+<blockquote>
+<p>---</p>
+
+<p>Title : 文章名</p>
+
+<p>Author : 作者名</p>
+
+<p>date : 时间</p>
+
+<p>---</p>
+</blockquote>
+</blockquote>
+
+<p>以下是示例的文件内容：</p>
+
+<blockquote>
+<blockquote>
+<p>---</p>
+
+<p>Title : 这是第一篇博客</p>
+
+<p>Author : winding345</p>
+
+<p>date : 2019-04-19</p>
+
+<p>---</p>
+
+<p>这个教程写起来太麻烦了</p>
+</blockquote>
+</blockquote>
+
+<p>保存并部署查看结果如下：</p>
+
+<p><img src="https://github.com/winding345/markdown-pictures/blob/master/site-create/8.png?raw=true" alt="" /></p>
+
+<p><img src="https://github.com/winding345/markdown-pictures/blob/master/site-create/9.png?raw=true" alt="" /></p>
+
+<p>到此，整个blog的主题内容教材已经基本完成了，对于网页来说，还可以在首页添加谷歌、github等个人主页的跳转链接，需要修改配置文件config.toml，在文件中加入代码：</p>
+
+<blockquote>
+<blockquote>
+<p>[params]</p>
+
+<p>github = &ldquo;<a href="https://github.com/yourgithubaccount&quot;">https://github.com/yourgithubaccount&quot;</a></p>
+
+<p><strong>注意</strong>后续过程中需要对配置文件进行修改添加类似于*SectionPagesMenu = &ldquo;main&rdquo;*时，需要在[params]上方进行添加</p>
+</blockquote>
+</blockquote>
+
+<p>完成以上配置后，保存并部署，观察效果如下所示：
+<img src="https://github.com/winding345/markdown-pictures/blob/master/site-create/10.png?raw=true" alt="" /></p>
+
+<p>至此，一个完整的博客网页的创建已经完成。</p>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6">
+        
+      </div>
+    </section>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://winding345.github.io/" >
+    &copy; 2019 winding345&#39;s blog
+  </a>
+    <div>
+
+
+
+
+
+
+
+<a href="https://github.com/winding345" target="_blank" class="link-transition github link dib z-999 pt3 pt0-l mr1" title="Github link" rel="noopener" aria-label="follow on Github——Opens in a new window">
+  <svg  height="32px"  style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+  <path d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"/>
+</svg>
+
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000" width="8px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/>
+</svg>
+</span></a>
+
+
+
+
+</div>
+  </div>
+</footer>
+
+    
+
+  <script src="/dist/js/app.3fc0f988d21662902933.js"></script>
+
+
+  </body>
+</html>

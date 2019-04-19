@@ -3,24 +3,17 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://winding345.github.io/post/first-post/</loc>
+    <loc>http://winding345.github.io/post/post2/</loc>
+    <lastmod>2019-04-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://winding345.github.io/post/post1/</loc>
     <lastmod>2019-04-18T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>http://winding345.github.io/post/</loc>
-    <lastmod>2019-04-18T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://winding345.github.io/tags/</loc>
-    <lastmod>2019-04-18T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://winding345.github.io/tags/blog/</loc>
     <lastmod>2019-04-18T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -41,6 +34,11 @@
   
   <url>
     <loc>http://winding345.github.io/contacts/</loc>
+  </url>
+  
+  <url>
+    <loc>http://winding345.github.io/tags/</loc>
+    <priority>0</priority>
   </url>
   
 </urlset>
